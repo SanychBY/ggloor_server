@@ -1,0 +1,121 @@
+/*@font-face {
+    font-family: Roboto; !* Гарнитура шрифта *!
+    src: url(fonts/pompadur.ttf); !* Путь к файлу со шрифтом *!
+}*/
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Roboto;
+    background: #343539;
+}
+
+#logo{
+    color: #d58512;
+    display: inline-block;
+    font-size: 25px;
+    margin: 9px 80px;
+}
+
+#header{
+    background: #212226;
+    width: 100%;
+    height: 50px;
+}
+#listOfMatch{
+    width: 500px;
+    background: #4d4e52;
+    margin: 75px 30%;
+    padding: 10px;
+}
+.listOfMatchItems{
+    position: relative;
+    color: whitesmoke;
+    margin: 0 0 15px;
+}
+.team1div{
+    position: relative;
+    width: 140px;
+    text-align: center;
+}
+.team1div, .team2div{
+    border: 2px solid #4D4E52;
+    cursor: pointer;
+}
+.team1div:hover, .team2div:hover{
+    border: 2px solid whitesmoke;
+    border-radius: 4px;
+}
+.matchData{
+    top: 10px;
+    position: absolute;
+    left: 155px;
+}
+.team2div{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 144px;
+    text-align: center;
+}
+#maindiv{
+    /*background-image: url("/static/images/site/fone.jpg");*/
+}
+.inputStyle1{
+    display: block;
+    width: 400px;
+    height: 30px;
+    margin: 0 20px 20px;
+    border-radius: 5px;
+    border: 0px;
+    padding: 10px;
+}
+
+.buttonStyle1{
+    border: 1px solid #d58512;
+    background-color: #eab05d;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #212226;
+}
+.buttonStyle2{
+    background: #b40303;
+    border: 0;
+    font-size: 18px;
+    padding: 2px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: whitesmoke;
+}
+#inputButtonHeader{
+    float: right;
+    margin: 11px 100px;
+}
+.buttonStyle1:hover{
+    background-color: #d58512;
+}
+.checkTeam{
+    cursor: pointer;
+    border: 2px solid #d58512;
+    border-radius: 4px;
+}
+#messageEv{
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    background: whitesmoke;
+    padding: 10px 30px;
+    border-radius: 5px;
+    right: 70px;
+}
+#roomHeaderLink{color: whitesmoke;
+    text-decoration: none;
+    float: right;
+    margin: 15px 200px 0 0;}
+#page_content{
+    display: table;
+    margin: 70px auto;
+    background: #4d4e52;
+}
