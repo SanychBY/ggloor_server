@@ -11,6 +11,7 @@ class Matches {
     Integer status
     Integer colGames
     String streamUrl
+    Tournament tournament
     static mapping = {
         version false
         status defaultValue: 0
@@ -25,5 +26,6 @@ class Matches {
         status nullable: true
         colGames nullable: true
         streamUrl nullable: true
+        tournament nullable: true
     }
 }

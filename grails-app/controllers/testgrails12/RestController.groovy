@@ -1,10 +1,12 @@
 package testgrails12
 
 import grails.converters.JSON
-import org.grails.datastore.mapping.query.Query.In
+import testgrails12.model.SettingsService
+
 
 class RestController {
     def authorizationService
+    def settingsService
     def index(String page) {
         render 'RestController ' + page
     }
@@ -43,6 +45,39 @@ class RestController {
             def ncomment = new Comments(user: login, text: comment, match: Matches.get(match_id), date: new Date())
             ncomment.save()
             render "ok"
+        }
+    }
+    def getSettings(String key){
+        def login = authorizationService.testAuth(key)
+        if (login != null){
+            def data = new SettingsService()
+            data.vk_id = login.vk_id
+            data.vk_access_token = login.vk_access_token
+            data.frequency = login.frequency
+            data.vk_notify = login.vk_notify
+            render data as JSON
+        }
+    }
+    def saveSettings(Integer frequency, Boolean notify){
+        def login = authorizationService.testAuth(key)
+        if(login != null){
+            def user = Users.executeUpdate("update Users set frequency = ?, vk_notify = ? where id = ?",[frequency, notify, login.id])
+            if (user != null){
+                render 'ok'
+            }else {
+                render 'error'
+            }
+        }
+    }
+    def saveVKUserData(String access_token, Integer vk_id, String key){
+        def login = authorizationService.testAuth(key)
+        if(login != null){
+            def user = Users.executeUpdate("update Users set vk_access_token = ?, vk_id = ? where id = ?",[access_token, vk_id, login.id])
+            if (user != null){
+                render 'ok'
+            }else {
+                render 'error'
+            }
         }
     }
 }

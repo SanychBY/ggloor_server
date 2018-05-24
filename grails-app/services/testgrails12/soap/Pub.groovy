@@ -9,6 +9,6 @@ import javax.xml.ws.Endpoint
 class Pub {
     static Endpoint ex()
     {
-        return Endpoint.publish("http://192.168.43.48:9999/ws/mysoap", new AuthExImpl())
+        return Endpoint.publish("http://192.168.100.4:9999/ws/mysoap", new AuthExImpl())
     }
 }

@@ -73,6 +73,9 @@
                     <g:submitToRemote onSuccess="successAddMatch(data)" url="[controller:'admin',action:'newMatch']" name="newMatch" value="Создать"/>
                 </g:form>
             </div>
+            <div>
+                <a href="https://oauth.vk.com/authorize?client_id=6474972&display=popup&redirect_uri=http://localhost:8080/VKVerify&group_ids=159158661&scope=messages&response_type=code&v=5.74">vk</a>
+            </div>
         </div>
     </g:if>
     <g:else>
