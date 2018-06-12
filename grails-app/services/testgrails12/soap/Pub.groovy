@@ -1,5 +1,6 @@
 package testgrails12.soap
 
+import testgrails12.AppSettings
 
 import javax.xml.ws.Endpoint
 
@@ -9,6 +10,7 @@ import javax.xml.ws.Endpoint
 class Pub {
     static Endpoint ex()
     {
-        return Endpoint.publish("http://192.168.100.4:9999/ws/mysoap", new AuthExImpl())
+        def link = AppSettings.findByKey("ip_soap")
+        return Endpoint.publish(link.value, new AuthExImpl())
     }
 }

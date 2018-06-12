@@ -9,8 +9,11 @@
 <html>
 <head>
     <title>${title}</title>
-    <asset:stylesheet href="ggloor.css"/>
     <asset:javascript src="jquery-2.2.0.min.js"/>
+    <asset:javascript src="bootstrap.js"/>
+    <asset:javascript src="application.js"/>
+    <asset:javascript src="com.bitloor.js"/>
+    <asset:stylesheet href="ggloor.css" />
 </head>
 
 <body>

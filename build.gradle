@@ -64,6 +64,16 @@ dependencies {
     testCompile "org.grails.plugins:geb"
     testRuntime "org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1"
     testRuntime "net.sourceforge.htmlunit:htmlunit:2.18"
+    compile 'org.grails.plugins:quartz:2.0.13'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    // https://mvnrepository.com/artifact/com.vk.api/sdk
+    compile group: 'com.vk.api', name: 'sdk', version: '0.5.12'
+
+
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml
+    compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version: '2.9.5'
+    compile group: 'com.google.guava', name: 'guava', version: '25.0-jre'
+    compile group: 'org.eclipse.jetty', name: 'jetty-server', version: '9.4.10.v20180503'
 }
 
 bootRun {

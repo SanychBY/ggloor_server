@@ -8,8 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
+    <asset:javascript src="jquery-2.2.0.min.js"/>
+    <asset:javascript src="bootstrap.js"/>
     <asset:javascript src="application.js"/>
     <asset:javascript src="com.bitloor.js"/>
+    <asset:stylesheet href="ggloor.css" />
     <title>Панель управления</title>
     <script type="text/javascript">
 
@@ -74,7 +77,7 @@
                 </g:form>
             </div>
             <div>
-                <a href="https://oauth.vk.com/authorize?client_id=6474972&display=popup&redirect_uri=http://localhost:8080/VKVerify&group_ids=159158661&scope=messages&response_type=code&v=5.74">vk</a>
+                <a href="${vklink}">vk</a>
             </div>
         </div>
     </g:if>

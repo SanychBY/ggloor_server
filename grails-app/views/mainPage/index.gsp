@@ -9,6 +9,12 @@
 <html>
 <head>
     <title>${title}</title>
+    <asset:javascript src="jquery-2.2.0.min.js"/>
+    <asset:javascript src="bootstrap.js"/>
+    <asset:javascript src="application.js"/>
+    <asset:javascript src="com.bitloor.js"/>
+    <asset:stylesheet href="ggloor.css" />
+
     <script type="text/javascript">
         function addLikeTeam(id) {
             $.post('/mainPage/addLike', {id: id}, function (data) {

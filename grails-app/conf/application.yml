@@ -92,22 +92,22 @@ dataSource:
     pooled: true
     jmxExport: true
     driverClassName: com.mysql.jdbc.Driver
-    username: root
-    password: 1111
+    username: ggloor@ggloor
+    password: rtnxeg10121996*
 
 environments:
     development:
         dataSource:
             dbCreate: update
-            url: jdbc:mysql://localhost:3306/ggloor?useSSL=false
+            url: jdbc:mysql://ggloor.mysql.database.azure.com:3306/ggloor?useSSL=true&requireSSL=false&autoReconnect=true
     test:
         dataSource:
             dbCreate: create-drop
-            url: jdbc:mysql://localhost:3306/ggloor?useSSL=false
+            url: jdbc:mysql://ggloor.mysql.database.azure.com:3306/ggloor?useSSL=true&requireSSL=false&autoReconnect=true
     production:
         dataSource:
             dbCreate: update
-            url: jdbc:mysql://localhost:3306/ggloor?useSSL=false
+            url: jdbc:mysql://ggloor.mysql.database.azure.com:3306/ggloor?useSSL=true&requireSSL=false&autoReconnect=true
             properties:
                 jmxEnabled: true
                 initialSize: 5
@@ -149,5 +149,4 @@ grails:
       password: rtnxeg1012
       props: ['mail.smtp.starttls.enable': 'true',
                            'mail.smtp.port': '465']
-
 

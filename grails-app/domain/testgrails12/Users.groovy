@@ -12,7 +12,7 @@ class Users {
     static mapping = {
         version false
         password column: 'password', sqlType: 'VARCHAR(500)'
-        frequency defaultValue: 60000000
+        frequency defaultValue: 600
         vk_notify defaultValue: true
         vk_access_token nullable: true
         vk_id nullable: true

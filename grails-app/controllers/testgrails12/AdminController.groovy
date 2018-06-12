@@ -15,7 +15,8 @@ class AdminController {
         def input = adminService.loginingTest(request)
         if(input) {
             def teams = Teams.findAll('from Teams')
-            [teamsArr: teams, input: input]
+            def link = AppSettings.findByKey("vk_aut_link")
+            [teamsArr: teams, input: input, vklink: link.value]
         }
         else{
             [input:input]

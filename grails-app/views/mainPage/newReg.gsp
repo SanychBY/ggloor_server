@@ -8,6 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
+    <asset:javascript src="jquery-2.2.0.min.js"/>
+    <asset:javascript src="bootstrap.js"/>
+    <asset:javascript src="application.js"/>
+    <asset:javascript src="com.bitloor.js"/>
+    <asset:stylesheet href="ggloor.css" />
     <title>Регистрация</title>
     <script type="text/javascript">
         function successReg(data) {

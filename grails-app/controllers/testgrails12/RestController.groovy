@@ -58,10 +58,10 @@ class RestController {
             render data as JSON
         }
     }
-    def saveSettings(Integer frequency, Boolean notify){
+    def saveSettings(Integer frequency, Boolean notify, String key){
         def login = authorizationService.testAuth(key)
         if(login != null){
-            def user = Users.executeUpdate("update Users set frequency = ?, vk_notify = ? where id = ?",[frequency, notify, login.id])
+        def user = Users.executeUpdate("update Users set frequency = ?, vk_notify = ? where id = ?",[frequency, notify, login.id])
             if (user != null){
                 render 'ok'
             }else {
